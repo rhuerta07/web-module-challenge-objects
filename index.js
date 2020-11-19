@@ -23,7 +23,7 @@ function createMenuItems(a, b, c){
   }
  }
 
- console.log(createMenuItems('tacos', 8, 'category'))
+ console.log(createMenuItems('tacos', 8, 'lunch'))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -56,9 +56,21 @@ Using the burger object below do the following:
 export const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
+  category: "Lunch",
+  discount: function (x){
+    if (x === "teacher"){
+       return burger.price * .25;
+    } else if(x === "student"){
+      return burger.price * .25;
+    } else {
+      return burger.price * .10;
+    }
+  }
 }
+
+console.log(burger.discount("teacher"));
+console.log(burger.discount("student"));
+console.log(burger.discount("public"));
 
 
 
