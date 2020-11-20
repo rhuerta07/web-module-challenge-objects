@@ -128,12 +128,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(param1, param2) {
-  
-    return { reviews[0] gave the restaurant a reviews[1] star review, and their feedback was: reviews[2]"
+function getReviewByIndex(reviews, x) {
+  return ` ${reviews[x].name} gave the restaurant a ${reviews[x].rating} star review, and their feedback was: ${reviews[x].feedback} `;
 
   }
-}
 
 console.log(getReviewByIndex(reviews,0));
 
@@ -150,10 +148,12 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
-
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+function getLastReview(reviews) {
+  return ` ${reviews[7].name} gave the restaurant a reviews ${reviews[7].rating} star review, and their feedback was: ${reviews[7].feedback} `;
+  
+}
+ console.log(getLastReview(reviews));
+  
 
 
 
